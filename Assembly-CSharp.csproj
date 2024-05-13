@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\KartAgent.cs" />
+    <Compile Include="Assets\Scripts\InstanceCombiner.cs" />
     <Compile Include="Assets\Scripts\KartController.cs" />
     <Compile Include="Assets\Scripts\CheckpointList.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />

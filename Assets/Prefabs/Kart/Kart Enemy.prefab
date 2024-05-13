@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3137537921386370560}
   - component: {fileID: 4926500517973101645}
-  - component: {fileID: 3234872930438067304}
+  - component: {fileID: 7744474562977469403}
   - component: {fileID: 4533955921737807705}
   - component: {fileID: 7225027604529059038}
   - component: {fileID: 3828149065779377708}
@@ -265,8 +265,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &3234872930438067304
-SphereCollider:
+--- !u!64 &7744474562977469403
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -283,9 +283,10 @@ SphereCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.85
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 33ab43448ce2c634385af40a3b109257, type: 2}
 --- !u!114 &4533955921737807705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +327,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  _checkpointManager: {fileID: 0}
 --- !u!114 &3828149065779377708
 MonoBehaviour:
   m_ObjectHideFlags: 0

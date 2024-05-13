@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3137537921386370560}
   - component: {fileID: 6369109778431090925}
-  - component: {fileID: 6200163775548838236}
+  - component: {fileID: 4254276706569501128}
   m_Layer: 2
   m_Name: Kart Agent
   m_TagString: Untagged
@@ -262,8 +262,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &6200163775548838236
-SphereCollider:
+--- !u!64 &4254276706569501128
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -280,9 +280,10 @@ SphereCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.85
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 33ab43448ce2c634385af40a3b109257, type: 2}
 --- !u!1 &3137537921393782560
 GameObject:
   m_ObjectHideFlags: 0
