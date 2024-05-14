@@ -7,7 +7,7 @@ public class KartController : MonoBehaviour
 {
     public Transform kartModel;
     public Transform kartNormal;
-    public Rigidbody sphere;
+    public Rigidbody hitbox;
 
     float speed, currentSpeed;
     float rotate, currentRotate;
@@ -42,8 +42,8 @@ public class KartController : MonoBehaviour
         kartModel.localEulerAngles = Vector3.Lerp(kartModel.localEulerAngles, new Vector3(0, 90 + (input * 15), kartModel.localEulerAngles.z), .2f);
 
         frontWheels.localEulerAngles = new Vector3(0, (input * 15), frontWheels.localEulerAngles.z);
-        frontWheels.localEulerAngles += new Vector3(0, 0, sphere.velocity.magnitude / 2);
-        backWheels.localEulerAngles += new Vector3(0, 0, sphere.velocity.magnitude / 2);
+        frontWheels.localEulerAngles += new Vector3(0, 0, hitbox.velocity.magnitude / 2);
+        backWheels.localEulerAngles += new Vector3(0, 0, hitbox.velocity.magnitude / 2);
 
         steeringWheel.localEulerAngles = new Vector3(-25, 90, ((input * 45)));
     }
@@ -55,13 +55,13 @@ public class KartController : MonoBehaviour
 
     public void FixedUpdate()
     {
-        sphere.AddForce(-kartModel.transform.right * currentSpeed, ForceMode.Acceleration);
+        hitbox.AddForce(-kartModel.transform.right * currentSpeed, ForceMode.Acceleration);
 
         //Gravity
-        sphere.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+        hitbox.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
 
         //Follow Collider
-        transform.position = sphere.transform.position - new Vector3(0, 0.4f, 0);
+        transform.position = hitbox.transform.position - new Vector3(0, 0.4f, 0);
 
         //Steering
         transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, transform.eulerAngles.y + currentRotate, 0), Time.deltaTime * 5f);
