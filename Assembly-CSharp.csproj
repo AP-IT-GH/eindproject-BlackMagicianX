@@ -60,13 +60,13 @@
     <Analyzer Include="C:\Program Files\2022.3.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SceneTransitionManager.cs" />
-    <Compile Include="Assets\Scripts\SetOptionFromUI.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\GameStartMenu.cs" />
-    <Compile Include="Assets\Scripts\UIAudio.cs" />
-    <Compile Include="Assets\Scripts\FadeScreen.cs" />
-    <Compile Include="Assets\Scripts\SetTurnTypeFromPlayerPref.cs" />
+    <Compile Include="Assets\temp\UIAudio.cs" />
+    <Compile Include="Assets\temp\SceneTransitionManager.cs" />
+    <Compile Include="Assets\temp\GameStartMenu.cs" />
+    <Compile Include="Assets\temp\SetOptionFromUI.cs" />
+    <Compile Include="Assets\temp\AudioManager.cs" />
+    <Compile Include="Assets\temp\FadeScreen.cs" />
+    <Compile Include="Assets\temp\SetTurnTypeFromPlayerPref.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -81,7 +81,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\Scripts\GradientSkybox.shader" />
+    <None Include="Assets\temp\GradientSkybox.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
