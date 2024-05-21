@@ -23,6 +23,8 @@ public class KartController : MonoBehaviour
     public Transform backWheels;
     public Transform steeringWheel;
 
+    public int laps = 0;
+
     public void Awake()
     {
 
@@ -46,11 +48,6 @@ public class KartController : MonoBehaviour
         backWheels.localEulerAngles += new Vector3(0, 0, hitbox.velocity.magnitude / 2);
 
         steeringWheel.localEulerAngles = new Vector3(-25, 90, ((input * 45)));
-    }
-
-    public void Respawn()
-    {
-
     }
 
     public void FixedUpdate()
