@@ -17,7 +17,7 @@ public class KartAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-      _checkpointManager.ResetCheckpoints();
+        _checkpointManager.ResetCheckpoints();
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -27,21 +27,28 @@ public class KartAgent : Agent
         AddReward(-0.001f);
     }
 
-   public override void OnActionReceived(ActionBuffers actions)
-   {
-      var Actions = actions.ContinuousActions;
-      
-      _kartController.ApplyAcceleration(Actions[1]);
-      _kartController.Steer(Actions[0]);
-      _kartController.AnimateKart(Actions[0]);
-   }
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+        var Actions = actions.ContinuousActions;
+
+        _kartController.ApplyAcceleration(Actions[1]);
+        _kartController.Steer(Actions[0]);
+        _kartController.AnimateKart(Actions[0]);
+
+        // Penalize for moving backward
+        Vector3 localVelocity = transform.InverseTransformDirection(_kartController.hitbox.velocity);
+        if (localVelocity.z < 0)
+        {
+            AddReward(-0.01f); // Adjust the penalty value as needed
+        }
+    }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         var action = actionsOut.ContinuousActions;
         action.Clear();
 
-        action[0] = Input.GetAxis("Horizontal"); //Steering
-        action[1] = Input.GetKey(KeyCode.W) ? 1f : 0; //Gas or no Gas
+        action[0] = Input.GetAxis("Horizontal"); // Steering
+        action[1] = Input.GetKey(KeyCode.W) ? 1f : 0; // Gas or no Gas
     }
 }

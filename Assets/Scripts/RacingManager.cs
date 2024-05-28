@@ -8,6 +8,7 @@ public class RacingManager : MonoBehaviour
 {
     private bool lapComplete;
     private int lap;
+    public KartAgent kartAgent;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,19 @@ public class RacingManager : MonoBehaviour
             lap++;
             Debug.Log($"Current lap: {lap}");
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            kartAgent.AddReward(-0.5f); // Adjust the penalty value as needed
+        }
+    }
+
+    public int GetCurrentLap()
+    {
+        return lap;
     }
 
     public void LapComplete()

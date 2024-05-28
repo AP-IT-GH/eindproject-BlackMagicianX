@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Checkpoint
   - InvisiWalls
+  - Agent
+  - Wall
   layers:
   - Default
   - TransparentFX

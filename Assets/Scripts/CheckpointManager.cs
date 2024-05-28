@@ -46,7 +46,12 @@ public class CheckpointManager : MonoBehaviour
 
     public void CheckPointReached(Checkpoint checkpoint)
     {
-        if (nextCheckPointToReach != checkpoint) return;
+        if (nextCheckPointToReach != checkpoint)
+        {
+            // Penalize for passing the wrong checkpoint
+            kartAgent.AddReward(-0.5f);
+            return;
+        }
         
         lastCheckpoint = CheckpointList[CurrentCheckpointIndex];
         reachedCheckpoint?.Invoke(checkpoint);
