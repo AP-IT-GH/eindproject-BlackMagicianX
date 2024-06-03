@@ -44,18 +44,12 @@ public class RacingManager : MonoBehaviour
         }
     }
 
-    public int GetCurrentLap()
-    {
-        return lap;
-    }
+    public int GetCurrentLap() {  return lap; }
 
-    public void LapComplete()
-    {
-        lapComplete = true;
-    }
+    public string GetRacerName() {  return RacerName; }
 
-    public void NextScene()
-    {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public void LapComplete() {  lapComplete = true; }
+
+    public void NextScene() { //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

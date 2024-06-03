@@ -14,6 +14,7 @@ public class PlacementManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        resultList = new List<String>();
         currentLap = Int32.MinValue;
     }
 
@@ -27,19 +28,19 @@ public class PlacementManager : MonoBehaviour
                 currentLap = player.GetComponent<RacingManager>().GetCurrentLap();
                 Debug.Log($"Current lap: {currentLap}");
             }
-        }
 
-        foreach (var player in playerList)
-        {
-            if (currentLap < player.GetComponent<RacingManager>().GetCurrentLap() && currentLap == 2)
+            if (player.GetComponent<RacingManager>().GetCurrentLap() == 4 && !resultList.Contains(player.GetComponent<RacingManager>().GetRacerName()))
             {
-                //resultList.Add();
+                resultList.Add(player.GetComponent<RacingManager>().GetRacerName());
             }
         }
 
-        if (currentLap == 3)
+        if (currentLap == 4)
         {
-            Debug.Log(resultList);
+            for (int i = 0; i < resultList.Count; i++)
+            {
+                Debug.Log($"{i + 1}: {resultList[i]}");
+            }
         }
     }
 }
