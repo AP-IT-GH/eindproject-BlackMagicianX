@@ -10,6 +10,8 @@ public class RacingManager : MonoBehaviour
     private int lap;
     public KartAgent kartAgent;
 
+    public string RacerName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,6 @@ public class RacingManager : MonoBehaviour
         {
             lapComplete = false;
             lap++;
-            Debug.Log($"Current lap: {lap}");
         }
     }
 
@@ -55,7 +56,6 @@ public class RacingManager : MonoBehaviour
 
     public void NextScene()
     {
-        Debug.Log("Next scene");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
