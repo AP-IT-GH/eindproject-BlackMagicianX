@@ -46,13 +46,14 @@ public class CheckpointManager : MonoBehaviour
 
     public void CheckPointReached(Checkpoint checkpoint)
     {
+        Debug.Log($"{CurrentCheckpointIndex}");
         if (nextCheckPointToReach != checkpoint)
         {
             // Penalize for passing the wrong checkpoint
             kartAgent.AddReward(-0.5f);
             return;
         }
-        
+
         lastCheckpoint = CheckpointList[CurrentCheckpointIndex];
         reachedCheckpoint?.Invoke(checkpoint);
         CurrentCheckpointIndex++;
@@ -63,9 +64,10 @@ public class CheckpointManager : MonoBehaviour
             kartAgent.AddReward(0.5f);
             kartAgent.EndEpisode();
         }
-        else
+        else if(nextCheckPointToReach == checkpoint)
         {
-            kartAgent.AddReward((0.5f) / CheckpointList.Count);
+            kartAgent.AddReward(0.25f + 0.005f * CurrentCheckpointIndex);
+            Debug.Log($"Gained {0.25f + 0.005f * CurrentCheckpointIndex}");
             SetNextCheckpoint();
         }
     }
@@ -76,7 +78,6 @@ public class CheckpointManager : MonoBehaviour
         {
             TimeLeft = MaxTimeToReachNextCheckpoint;
             nextCheckPointToReach = CheckpointList[CurrentCheckpointIndex];
-            
         }
     }
 }

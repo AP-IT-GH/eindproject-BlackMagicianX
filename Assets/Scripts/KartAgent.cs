@@ -24,7 +24,6 @@ public class KartAgent : Agent
     {
         Vector3 diff = _checkpointManager.nextCheckPointToReach.transform.position - transform.position;
         sensor.AddObservation(diff / 20f);
-        AddReward(-0.001f);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
