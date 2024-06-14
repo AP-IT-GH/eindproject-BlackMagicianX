@@ -38,7 +38,7 @@ public class KartAgent : Agent
         Vector3 localVelocity = transform.InverseTransformDirection(_kartController.hitbox.velocity);
         if (localVelocity.z < 0)
         {
-            AddReward(-0.01f); // Adjust the penalty value as needed
+            AddReward(-0.01f);
         }
     }
 

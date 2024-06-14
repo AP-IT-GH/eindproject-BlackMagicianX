@@ -34,13 +34,13 @@ public class RacingManager : MonoBehaviour
         // Apply continuous penalty if the kart is off-road
         if (isOffRoad)
         {
-            kartAgent.AddReward(-0.01f); // Adjust the penalty value as needed
+            kartAgent.AddReward(-0.01f);
         }
 
         // Apply continuous reward if the kart is on the road
         if (isOnRoad)
         {
-            kartAgent.AddReward(0.001f); // Adjust the reward value as needed
+            kartAgent.AddReward(0.001f);
         }
     }
 
@@ -58,8 +58,7 @@ public class RacingManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            kartAgent.AddReward(-1f); // Adjust the penalty value as needed
-            Debug.Log("bonk");
+            kartAgent.AddReward(-1f);
         }
     }
 
@@ -70,14 +69,12 @@ public class RacingManager : MonoBehaviour
             isOffRoad = true;
             isOnRoad = false;
             kartController.acceleration = 30f;
-            Debug.Log("Off Road");
         }
         else if (collision.gameObject.CompareTag("Road"))
         {
             isOffRoad = false;
             isOnRoad = true;
             kartController.acceleration = currentAccel;
-            Debug.Log("On Road");
         }
     }
 

@@ -49,7 +49,6 @@ public class CheckpointManager : MonoBehaviour
         Debug.Log($"{CurrentCheckpointIndex}");
         if (nextCheckPointToReach != checkpoint)
         {
-            // Penalize for passing the wrong checkpoint
             kartAgent.AddReward(-0.5f);
             return;
         }
