@@ -67,7 +67,6 @@ public class CheckpointManager : MonoBehaviour
         else if(nextCheckPointToReach == checkpoint)
         {
             kartAgent.AddReward(0.25f + 0.005f * CurrentCheckpointIndex);
-            Debug.Log($"Gained {0.25f + 0.005f * CurrentCheckpointIndex}");
             SetNextCheckpoint();
         }
     }
