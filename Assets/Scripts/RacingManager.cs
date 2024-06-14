@@ -9,12 +9,19 @@ public class RacingManager : MonoBehaviour
     private bool lapComplete;
     private int lap;
     public KartAgent kartAgent;
+    public KartController kartController;
+    private float currentAccel;
+    private bool isOffRoad;
+    private bool isOnRoad;
 
     // Start is called before the first frame update
     void Start()
     {
         lapComplete = true;
         lap = 0;
+        currentAccel = kartController.acceleration;
+        isOffRoad = false;
+        isOnRoad = false;
     }
 
     void Update()
@@ -22,6 +29,18 @@ public class RacingManager : MonoBehaviour
         if (lap == 3)
         {
             NextScene();
+        }
+
+        // Apply continuous penalty if the kart is off-road
+        if (isOffRoad)
+        {
+            kartAgent.AddReward(-0.01f);
+        }
+
+        // Apply continuous reward if the kart is on the road
+        if (isOnRoad)
+        {
+            kartAgent.AddReward(0.001f);
         }
     }
 
@@ -39,7 +58,36 @@ public class RacingManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            kartAgent.AddReward(-0.5f); // Adjust the penalty value as needed
+            kartAgent.AddReward(-1f);
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("OffRoad"))
+        {
+            isOffRoad = true;
+            isOnRoad = false;
+            kartController.acceleration = 30f;
+        }
+        else if (collision.gameObject.CompareTag("Road"))
+        {
+            isOffRoad = false;
+            isOnRoad = true;
+            kartController.acceleration = currentAccel;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("OffRoad"))
+        {
+            isOffRoad = false;
+            kartController.acceleration = currentAccel;
+        }
+        else if (collision.gameObject.CompareTag("Road"))
+        {
+            isOnRoad = false;
         }
     }
 

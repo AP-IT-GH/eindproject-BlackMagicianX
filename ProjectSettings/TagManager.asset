@@ -8,6 +8,8 @@ TagManager:
   - InvisiWalls
   - Agent
   - Wall
+  - OffRoad
+  - Road
   layers:
   - Default
   - TransparentFX
