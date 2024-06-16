@@ -9,8 +9,8 @@ public class KartController : MonoBehaviour
     public Transform kartNormal;
     public Rigidbody hitbox;
 
-    float speed, currentSpeed;
-    float rotate, currentRotate;
+    public float speed, currentSpeed;
+    public float rotate, currentRotate;
 
     [Header("Parameters")]
     public float acceleration = 30f;

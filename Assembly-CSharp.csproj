@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EndScreen Controller.cs" />
+    <Compile Include="Assets\Scripts\EngineSoundManager.cs" />
     <Compile Include="Assets\Scripts\KartAgent.cs" />
     <Compile Include="Assets\Scripts\SceneTransitionManager.cs" />
     <Compile Include="Assets\Scripts\Events\ChangeScene.cs" />
