@@ -105,7 +105,7 @@ Desalniettemin hebben wij wel goede resultaten gekregen na het trainen van de Ag
 
 
 ## Conclusie 
-Onze doel was het maken van een immersieve kart racing experience waarin de speler aan het racen is tegen AI getrainde tegenstanders.
+Ons doel was het maken van een immersieve kart racing experience waarin de speler aan het racen is tegen AI getrainde tegenstanders.
 
 Dit was ons gelukt met behulp van ML Agents, waarbij de Agent positieve en negatieve feedback krijgt aan de hand van zijn gedrag. 
 Hoe sneller en netter de Agent door de circuit rijd, de meer positieve reward hij krijgt. 
