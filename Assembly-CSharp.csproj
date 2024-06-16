@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\KartController.cs" />
     <Compile Include="Assets\Scripts\CheckpointList.cs" />
     <Compile Include="Assets\Scripts\RacingManager.cs" />
+    <Compile Include="Assets\Scripts\Events\RaceStartEvent.cs" />
     <Compile Include="Assets\Scripts\FadeScreen.cs" />
     <Compile Include="Assets\Scripts\SetTurnTypeFromPlayerPref.cs" />
   </ItemGroup>
