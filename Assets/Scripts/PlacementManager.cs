@@ -9,18 +9,19 @@ public class PlacementManager : MonoBehaviour
     public List<GameObject> playerList;
     private List<String> resultList;
 
-    private int currentLap;
+    private RacingManager racingManager;
+    private bool playerFinished;
+    private string playerName;
 
-    void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
+    private int currentLap;
 
     // Start is called before the first frame update
     void Start()
     {
+        racingManager = new RacingManager();
         resultList = new List<String>();
         currentLap = Int32.MinValue;
+        playerFinished = false;
     }
 
     // Update is called once per frame
@@ -36,16 +37,26 @@ public class PlacementManager : MonoBehaviour
 
             if (player.GetComponent<RacingManager>().GetCurrentLap() == 4 && !resultList.Contains(player.GetComponent<RacingManager>().GetRacerName()))
             {
+                if (player.CompareTag("Player"))
+                {
+                    playerFinished = true;
+                    playerName = player.GetComponent<RacingManager>().GetRacerName();
+                }
                 resultList.Add(player.GetComponent<RacingManager>().GetRacerName());
             }
         }
 
-        if (currentLap == 4)
+        if (currentLap == 4 && playerFinished)
         {
+            ResultController.playerName = this.playerName;
+            
             for (int i = 0; i < resultList.Count; i++)
             {
-                Debug.Log($"{i + 1}: {resultList[i]}");
+                if (resultList[i] == playerName)
+                    ResultController.playerPlace = i + 1;
             }
+
+            racingManager.NextScene();
         }
     }
 }

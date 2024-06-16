@@ -19459,6 +19459,10 @@ PrefabInstance:
       propertyPath: m_BehaviorType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5581273556895489680, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
       propertyPath: MaxStep
       value: 50000

@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 5651303033190311902}
   m_Layer: 2
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1264,3 +1264,4 @@ MonoBehaviour:
   frontWheels: {fileID: 3137537921143488001}
   backWheels: {fileID: 3137537921864692967}
   steeringWheel: {fileID: 3137537921393488640}
+  laps: 0

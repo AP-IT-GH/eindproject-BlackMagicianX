@@ -27,11 +27,6 @@ public class RacingManager : MonoBehaviour
 
     void Update()
     {
-        if (lap == 4)
-        {
-            NextScene();
-        }
-
         // Apply continuous penalty if the kart is off-road
         if (isOffRoad)
         {
@@ -105,6 +100,6 @@ public class RacingManager : MonoBehaviour
 
     public void NextScene()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
