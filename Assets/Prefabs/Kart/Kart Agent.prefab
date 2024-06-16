@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7045299744788845889}
   m_Layer: 0
   m_Name: Kart Agent
-  m_TagString: Untagged
+  m_TagString: Agent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   frontWheels: {fileID: 2710619512661829041}
   backWheels: {fileID: 7359930194471421439}
   steeringWheel: {fileID: 560830766730020026}
+  laps: 0
 --- !u!114 &5581273556895489680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 7771ba659f821134796ded62cf9fc559, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: KartAgent
@@ -460,6 +461,7 @@ GameObject:
   - component: {fileID: 1081034120541892614}
   - component: {fileID: 4194969546359742917}
   - component: {fileID: 2127826760751457628}
+  - component: {fileID: 8203647880970437303}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -546,6 +548,21 @@ MonoBehaviour:
   TimeLeft: 30
   kartAgent: {fileID: 5581273556895489680}
   nextCheckPointToReach: {fileID: 0}
+  racingManager: {fileID: 8203647880970437303}
+--- !u!114 &8203647880970437303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4318237875629190573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de1ad481e11c3b419dab952395a4725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kartAgent: {fileID: 5581273556895489680}
+  kartController: {fileID: 7727420331995151372}
 --- !u!1 &5085361173366856832
 GameObject:
   m_ObjectHideFlags: 0

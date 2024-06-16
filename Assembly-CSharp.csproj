@@ -62,16 +62,20 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\KartAgent.cs" />
     <Compile Include="Assets\Scripts\SceneTransitionManager.cs" />
+    <Compile Include="Assets\Scripts\Events\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\SteeringWheel.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\SetOptionFromUI.cs" />
+    <Compile Include="Assets\Scripts\Events\ExitEvent.cs" />
     <Compile Include="Assets\Scripts\CheckpointManager.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\GameStartMenu.cs" />
+    <Compile Include="Assets\Scripts\PlacementManager.cs" />
     <Compile Include="Assets\Scripts\UIAudio.cs" />
     <Compile Include="Assets\Scripts\InstanceCombiner.cs" />
     <Compile Include="Assets\Scripts\KartController.cs" />
     <Compile Include="Assets\Scripts\CheckpointList.cs" />
+    <Compile Include="Assets\Scripts\RacingManager.cs" />
     <Compile Include="Assets\Scripts\FadeScreen.cs" />
     <Compile Include="Assets\Scripts\SetTurnTypeFromPlayerPref.cs" />
   </ItemGroup>

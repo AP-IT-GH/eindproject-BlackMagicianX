@@ -8,6 +8,10 @@ TagManager:
   - InvisiWalls
   - projectile
   - FxTemporaire
+  - Agent
+  - Wall
+  - OffRoad
+  - Road
   layers:
   - Default
   - TransparentFX
