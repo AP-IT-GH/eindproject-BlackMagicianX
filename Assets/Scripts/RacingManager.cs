@@ -23,6 +23,11 @@ public class RacingManager : MonoBehaviour
         currentAccel = kartController.acceleration;
         isOffRoad = false;
         isOnRoad = false;
+
+        kartController.acceleration = 0f;
+        kartController.gravity = 0f;
+        kartController.steering = 0f;
+        StartCoroutine(Countdown(4));
     }
 
     void Update()
@@ -106,5 +111,23 @@ public class RacingManager : MonoBehaviour
     public void NextScene()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator Countdown(int seconds)
+    {
+        int count = seconds;
+
+        while (count > 0)
+        {
+
+            // display something...
+            yield return new WaitForSeconds(1);
+            count--;
+        }
+
+        // count down is finished...
+        kartController.acceleration = currentAccel;
+        kartController.gravity = 25f;
+        kartController.steering = 15f;
     }
 }
