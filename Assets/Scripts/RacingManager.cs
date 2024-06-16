@@ -10,6 +10,7 @@ public class RacingManager : MonoBehaviour
     private int lap;
     public KartAgent kartAgent;
     public KartController kartController;
+    public string racerName;
     private float currentAccel;
     private bool isOffRoad;
     private bool isOnRoad;
@@ -26,7 +27,7 @@ public class RacingManager : MonoBehaviour
 
     void Update()
     {
-        if (lap == 3)
+        if (lap == 4)
         {
             NextScene();
         }
@@ -50,7 +51,6 @@ public class RacingManager : MonoBehaviour
         {
             lapComplete = false;
             lap++;
-            Debug.Log($"Current lap: {lap}");
         }
     }
 
@@ -101,9 +101,10 @@ public class RacingManager : MonoBehaviour
         lapComplete = true;
     }
 
+    public string GetRacerName() {  return racerName; }
+
     public void NextScene()
     {
-        Debug.Log("Next scene");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

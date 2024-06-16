@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 6428444206410237882}
   - component: {fileID: 2114072032239888363}
   - component: {fileID: 5586232748154138776}
+  - component: {fileID: 1168683235140921110}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -1078,6 +1079,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 9.999999}
   m_Center: {x: 0, y: 0, z: 0.000015258789}
+--- !u!114 &1168683235140921110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362628577613043107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf01348790743294599ff94dbd719ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerList: []
 --- !u!1 &363808313094085838
 GameObject:
   m_ObjectHideFlags: 0
