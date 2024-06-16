@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1817236227}
-  m_IndirectSpecularColor: {r: 0.18384448, g: 0.22859347, b: 0.30081007, a: 1}
+  m_IndirectSpecularColor: {r: 0.18384424, g: 0.22859326, b: 0.3008089, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2066,12 +2066,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5085361173366856832, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &128188806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 128188805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &134929608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1690117835345764520, guid: 87b71185968dc4c4d9435c0493064027, type: 3}
@@ -2447,12 +2456,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5085361173366856832, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &173411537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 173411536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &196277357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1690117835345764520, guid: 87b71185968dc4c4d9435c0493064027, type: 3}
@@ -3530,12 +3548,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5085361173366856832, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &276791844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 276791843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &285807859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3960,12 +3987,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5085361173366856832, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &352745015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 352745014}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &356412778
 GameObject:
   m_ObjectHideFlags: 0
@@ -11521,6 +11557,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5244926481502043661, guid: 0ac7649b22d33864c9cf79c3ba4b3456, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2078745863}
+    - targetCorrespondingSourceObject: {fileID: 5244926481502043661, guid: 0ac7649b22d33864c9cf79c3ba4b3456, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078745864}
   m_SourcePrefab: {fileID: 100100000, guid: 0ac7649b22d33864c9cf79c3ba4b3456, type: 3}
 --- !u!4 &961768207 stripped
 Transform:
@@ -13204,12 +13243,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5085361173366856832, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &1075732738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 1075732737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1075841176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13282,12 +13330,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5085361173366856832, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &1075841177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 1075841176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1076131188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13360,12 +13417,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5085361173366856832, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &1076131189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 1076131188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080359523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1690117835345764520, guid: 87b71185968dc4c4d9435c0493064027, type: 3}
@@ -19437,11 +19503,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &1622084092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 1622084091}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666715686
 GameObject:
   m_ObjectHideFlags: 0
@@ -20387,12 +20462,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203647880970437303, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+      propertyPath: racerName
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5085361173366856832, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+--- !u!1 &1720649971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318237875629190573, guid: d9d2327a0c452854a9f73e97f9d617a0, type: 3}
+  m_PrefabInstance: {fileID: 1720649970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1726173075
 GameObject:
   m_ObjectHideFlags: 0
@@ -24256,6 +24340,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6518828, y: 13.2, z: 49.8}
   m_Center: {x: 0.013482392, y: 0.0000067929386, z: 0.032687902}
+--- !u!114 &2078745864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078745862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf01348790743294599ff94dbd719ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerList:
+  - {fileID: 1622084092}
+  - {fileID: 1076131189}
+  - {fileID: 1720649971}
+  - {fileID: 1075732738}
+  - {fileID: 173411537}
+  - {fileID: 352745015}
+  - {fileID: 128188806}
+  - {fileID: 276791844}
+  - {fileID: 1075841177}
 --- !u!1 &2089960413
 GameObject:
   m_ObjectHideFlags: 0
