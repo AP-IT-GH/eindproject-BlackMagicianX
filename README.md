@@ -1,7 +1,6 @@
 # Kart Racer - Round Table Games
 
-
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/logo.png)
+<img src="images/logo.png" alt="logo"/>
 
 ## Gemaakt door:
 
@@ -10,12 +9,14 @@
 - Marwan Benali s129511
 
 ## Round Table Kart
-Een racing game waarbij de tegenstanders bestuurd worden doormiddel van Machine Learning. De speler bestuurd een kart en probeert zo snel mogelijk een ronde te voltooien, terwijl de AI-tegenstanders moeten navigeren zonder van de baan te raken. 
-De Agents worden getrained doormiddel van Competitive Multi-Agent om zo min mogelijk van de baan te vliegen en zo snel mogelijk een ronde te halen. 
+Een racing game waarbij de tegenstanders bestuurd worden doormiddel van Machine Learning. De speler bestuurd een kart en probeert zo snel mogelijk een ronde te voltooien, 
+terwijl de AI-tegenstanders moeten navigeren zonder van de baan te raken. 
+De Agents worden getrained om zo min mogelijk van de baan te vliegen en zo snel mogelijk een ronde te halen. 
 
-De wereld bevat een circuit gemaakt van asfalt met meerdere bochten. 
+In deze tutorial leggen wij uit hoe je dit project werkend kan krijgen op jouw systeem zodat jij een nieuwe training model kan creëren. 
+Daarnaast leggen we ook uit welke objecten wij gebruiken, de observaties en rewards van de Agent en onze eigen resultaten.
 
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/Racing.png)
+<img src="images/Racing.png" alt="Racing"/>
 
 ## Vereisten
 ### Windows
@@ -54,35 +55,38 @@ De wereld bevat een circuit gemaakt van asfalt met meerdere bochten.
 
 ## Objecten
 
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/Player.png)
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/Agent.png)
+Hier is de Kart die gebruikt word door de speler:
+
+<img src="images/Player.png" width="210" height="168" alt="Player"/><br><sub><sup>*Mixandjam. (n.d.). GitHub - mixandjam/MarioKart-Drift*.</sup></sub>
+
+Dit is de Kart die door ML Agents getrained word om zelf door de circuit de racen:
+
+<img src="images/Agent.png" width="210" height="168" alt="Agent"/><br><sub><sup>*Mixandjam. (n.d.). GitHub - mixandjam/MarioKart-Drift*.</sup></sub>
+
+Dit is de circuit waar de speler en de agents op racen. Er zijn barrières geplaatst op meerdere plekken om te voorkomen dat de racers
+verkeerd rijden.
+
+<img src="images/Track1.png" alt="Track"/><br><sub><sup>*Cartoon Race Track - Oval | 3D Roadways | Unity Asset Store. (2021, February 12). Unity Asset Store. https://assetstore.unity.com/packages/3d/environments/roadways/cartoon-race-track-oval-175061*.</sup></sub>
 
 ## Agent Observaties, Mogelijke Acties en Beloningen
 
 De Agent heeft twee verschillende acties: Accelereren en sturen. De Agent kan ook achteruit rijden, maar krijgt daarvoor wel een penalty, dus word het alleen gebruikt bij noodgevallen.
 
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/Actions.png)
-
-<sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
+<img src="images/Actions.png" alt="Actions"/><br><sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
 
 De Agent kan observeren waar de volgende checkpoint is. Eenmaal wanneer een checkpoint bereikt is door de Agent, checkt de Agent of de checkpoint de volgende in de lijst is. 
 Als dat zo is, dan krijgt de Agent een reward van 0.25f + bonus reward voor hoe snel de Agent was voor het bereiken van de checkpoint.
 Als de de checkpoint de laatste checkpoint is in de lijst, dan heeft de Agent een lap complete en krijgt de Agent een reward van 0.5f, en word de Episode geëindigd. 
 
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/CheckPointReached.png)
-
-<sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
+<img src="images/CheckPointsReached.png" alt="CheckPointsReached"/><br><sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
 
 De Agent krijgt een penalty als die een muur raakt of van de weg vliegt en een reward als de Agent op de weg blijft.
 
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/Penalty.png)
-
-
+<img src="images/Penalty.png" alt="Penalty"/>
 
 ## One Pager
 
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/OnePager.png)
-
+<img src="images/OnePager.png" alt="OnePager"/>
 
 
 ## Tensorboard waarnemingen
@@ -96,7 +100,7 @@ te groot is.
 
 Desalniettemin hebben wij wel goede resultaten gekregen na het trainen van de Agents en proberen ze zo veel mogelijk (en zo snel mogelijk) op de weg te rijden.
 
-![image](https://github.com/AP-IT-GH/eindproject-RoundTableGames/blob/Documentation/images/Tensorboard.png)
+<img src="images/Tensorboard.png" alt="Tensorboard"/>
 
 
 
@@ -105,7 +109,6 @@ Onze doel was het maken van een immersieve kart racing experience waarin de spel
 
 Dit was ons gelukt met behulp van ML Agents, waarbij de Agent positieve en negatieve feedback krijgt aan de hand van zijn gedrag. 
 Hoe sneller en netter de Agent door de circuit rijd, de meer positieve reward hij krijgt. 
-
 En hoewel resultaten in grafieken één ding zijn, ligt het belangrijkste gedeelte in de ervaring van de speler. Wat we hieruit terug kregen zijn AI getrainde tegenstanders die
 een interessante maar ook uitdagende gaming experience geven en racen zoals verwacht word van de speler.
 
