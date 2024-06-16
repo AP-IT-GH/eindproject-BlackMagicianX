@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RaceStartEvent : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     public GameObject startLightC;
     public GameObject startLightB;
     public GameObject startLightA;
@@ -29,6 +32,7 @@ public class RaceStartEvent : MonoBehaviour
     IEnumerator Countdown()
     {
         yield return new WaitForSeconds(1);
+        audioSource.PlayOneShot(audioClip);
         SetLightState(startLightC, true);
 
         yield return new WaitForSeconds(1);
