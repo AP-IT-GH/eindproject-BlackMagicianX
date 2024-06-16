@@ -562,6 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kartAgent: {fileID: 5581273556895489680}
+  kartController: {fileID: 7727420331995151372}
 --- !u!1 &5085361173366856832
 GameObject:
   m_ObjectHideFlags: 0

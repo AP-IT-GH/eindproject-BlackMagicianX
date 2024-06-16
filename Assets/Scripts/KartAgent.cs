@@ -24,7 +24,6 @@ public class KartAgent : Agent
     {
         Vector3 diff = _checkpointManager.nextCheckPointToReach.transform.position - transform.position;
         sensor.AddObservation(diff / 20f);
-        AddReward(-0.001f);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -39,7 +38,7 @@ public class KartAgent : Agent
         Vector3 localVelocity = transform.InverseTransformDirection(_kartController.hitbox.velocity);
         if (localVelocity.z < 0)
         {
-            AddReward(-0.01f); // Adjust the penalty value as needed
+            AddReward(-0.01f);
         }
     }
 
