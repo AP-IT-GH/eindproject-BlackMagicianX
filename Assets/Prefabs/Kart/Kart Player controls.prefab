@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 487219828416636692}
   - component: {fileID: 6818549179409250506}
   - component: {fileID: 3506467159933446406}
-  - component: {fileID: 2985426071150849673}
+  - component: {fileID: 1784625040131174772}
   m_Layer: 2
   m_Name: steeringWheelCtrlr
   m_TagString: Untagged
@@ -83,7 +83,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &2985426071150849673
+--- !u!114 &1784625040131174772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1505034936992598953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f41534aaeaf371c418a8598d271648da, type: 3}
+  m_Script: {fileID: 11500000, guid: 454e68d7b69f82145b3ace093df68e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 534327168678276753}
@@ -186,6 +186,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   wheelTransform: {fileID: 6453155899726520831}
+  kartController: {fileID: 1616423499398736431}
   OnWheelRotated:
     m_PersistentCalls:
       m_Calls: []
@@ -602,7 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3137537921386370560}
   m_Layer: 2
-  m_Name: Kart Player
+  m_Name: Kart Player controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2461,7 +2462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3229561860516118056}
-  - component: {fileID: 4824511103423163096}
+  - component: {fileID: 1616423499398736431}
   m_Layer: 2
   m_Name: Kart
   m_TagString: Untagged
@@ -2486,7 +2487,7 @@ Transform:
   - {fileID: 3137537921882263165}
   m_Father: {fileID: 3137537921386370560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4824511103423163096
+--- !u!114 &1616423499398736431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2495,21 +2496,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 9023294257551329976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d61c7eed99d464b80cbc6f8c924e69, type: 3}
+  m_Script: {fileID: 11500000, guid: b58c700cb1de2564ea4dca18ba604d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Accelerate: {fileID: -2823676518491141967, guid: 45832e59db919b94faf4cbb5911a4115, type: 3}
+  Brake: {fileID: -1968795328269319885, guid: 45832e59db919b94faf4cbb5911a4115, type: 3}
   kartModel: {fileID: 3137537921393488654}
   kartNormal: {fileID: 3137537922403377517}
   hitbox: {fileID: 5936759502304813863}
-  acceleration: 30
-  steering: 80
-  gravity: 10
+  acceleration: 80
+  braking: 20
+  steering: 5
+  gravity: 25
   layerMask:
     serializedVersion: 2
     m_Bits: 0
   frontWheels: {fileID: 3137537921143488001}
   backWheels: {fileID: 3137537921864692967}
-  steeringWheel: {fileID: 3137537921393488640}
+  steeringWheelModel: {fileID: 487219828416636692}
   laps: 0
 --- !u!1001 &2649577701889053222
 PrefabInstance:
