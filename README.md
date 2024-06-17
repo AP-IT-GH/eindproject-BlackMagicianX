@@ -57,7 +57,7 @@ Na het opstarten van de game ziet de speler een start menu. De speler moet met d
 In de Opties menu kan de volume aangepast worden.
 
 In de game ziet de speler een stuur. Deze kan vastgepakt worden om hiermee de kart te besturen. Eerst moet er gewacht worden op het start signaal. Nadat het signaal gegeven is en de lampen groen branden kunnen de karts accelereren. 
-Door te klikken op de rechter trigger gaat de Kart vooruit. De speler moet meerdere laps behalen om de race te beeindigen.
+Door te klikken op de rechter trigger gaat de Kart vooruit, remmen doe je met de linker trigger. De speler moet meerdere laps behalen om de race te beeindigen.
 
 Eenmaal als alle laps voorbij zijn word de speler gestuurd naar een eindscherm waar te zien is op hoeveelste plek de speler gefinished is. Hier kan uiteindelijk besloten worden om het spel te beeindigen of terug te gaan naar de start menu.
 
