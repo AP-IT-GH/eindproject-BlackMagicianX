@@ -53,6 +53,15 @@ Daarnaast leggen we ook uit welke objecten wij gebruiken, de observaties en rewa
     ```
 ## Gameplay Uitleg
 
+Na het opstarten van de game ziet de speler een start menu. De speler moet met de VR Controller wijzen naar "Start" en drukken op de primary button.
+In de Opties menu kan de volume aangepast worden.
+
+In de game ziet de speler een stuur. Deze kan vastgepakt worden om hiermee de kart te besturen. Eerst moet er gewacht worden op het start signaal. Nadat het signaal gegeven is en de lampen groen branden kunnen de karts accelereren. 
+Door te klikken op de rechter trigger gaat de Kart vooruit. De speler moet meerdere laps behalen om de race te beeindigen.
+
+Eenmaal als alle laps voorbij zijn word de speler gestuurd naar een eindscherm waar te zien is op hoeveelste plek de speler gefinished is. Hier kan uiteindelijk besloten worden om het spel te beeindigen of terug te gaan naar de start menu.
+
+
 ## Objecten
 
 Hier is de Kart die gebruikt word door de speler:
