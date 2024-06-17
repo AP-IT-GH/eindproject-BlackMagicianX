@@ -9,7 +9,9 @@ public class RacingManager : MonoBehaviour
     private bool lapComplete;
     private int lap;
     public KartAgent kartAgent;
+    #nullable enable
     public KartController? kartController;
+    #nullable enable
     public PlayerKartController? playerKartController;
     public string racerName;
     private float currentAccelPlayer;

@@ -55,34 +55,32 @@
     <UnityVersion>2022.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\EndScreen Controller.cs" />
-    <Compile Include="Assets\Scripts\EngineSoundManager.cs" />
-    <Compile Include="Assets\Scripts\KartAgent.cs" />
-    <Compile Include="Assets\Scripts\SceneTransitionManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerKartController.cs" />
+    <Compile Include="Assets\Scripts\Events\SetTurnTypeFromPlayerPref.cs" />
+    <Compile Include="Assets\Scripts\Events\GameStartMenu.cs" />
+    <Compile Include="Assets\Scripts\Kart Agent\KartAgent.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\CheckpointManager.cs" />
     <Compile Include="Assets\Scripts\Events\ChangeScene.cs" />
-    <Compile Include="Assets\Scripts\Checkpoint.cs" />
-    <Compile Include="Assets\Scripts\SetOptionFromUI.cs" />
+    <Compile Include="Assets\Scripts\Player Movement\PlayerKartController.cs" />
     <Compile Include="Assets\Scripts\Events\ExitEvent.cs" />
-    <Compile Include="Assets\Scripts\CheckpointManager.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\GameStartMenu.cs" />
-    <Compile Include="Assets\Scripts\PlacementManager.cs" />
-    <Compile Include="Assets\Scripts\UIAudio.cs" />
-    <Compile Include="Assets\Scripts\InstanceCombiner.cs" />
-    <Compile Include="Assets\Scripts\KartController.cs" />
-    <Compile Include="Assets\Scripts\PlayerSteeringWheel.cs" />
-    <Compile Include="Assets\Scripts\ResultController.cs" />
-    <Compile Include="Assets\Scripts\CheckpointList.cs" />
-    <Compile Include="Assets\Scripts\RacingManager.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Events\ResultController.cs" />
+    <Compile Include="Assets\Scripts\Audio\EngineSoundManager.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\Checkpoint.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\PlacementManager.cs" />
+    <Compile Include="Assets\Scripts\Events\FadeScreen.cs" />
+    <Compile Include="Assets\Scripts\Audio\UIAudio.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\CheckpointList.cs" />
+    <Compile Include="Assets\Scripts\Kart Agent\KartController.cs" />
+    <Compile Include="Assets\Scripts\Events\SetOptionFromUI.cs" />
+    <Compile Include="Assets\Scripts\Player Movement\PlayerSteeringWheel.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\RacingManager.cs" />
+    <Compile Include="Assets\Scripts\Events\SceneTransitionManager.cs" />
     <Compile Include="Assets\Scripts\Events\RaceStartEvent.cs" />
-    <Compile Include="Assets\Scripts\FadeScreen.cs" />
-    <Compile Include="Assets\Scripts\SetTurnTypeFromPlayerPref.cs" />
+    <Compile Include="Assets\Scripts\Events\EndScreen Controller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
