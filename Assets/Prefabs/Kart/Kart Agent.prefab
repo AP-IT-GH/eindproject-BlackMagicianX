@@ -509,7 +509,7 @@ AudioSource:
   MinDistance: 0.5
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -526,7 +526,7 @@ AudioSource:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
+      time: 0.09877777
       value: 0
       inSlope: 0
       outSlope: 0
@@ -710,6 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kartAgent: {fileID: 5581273556895489680}
   kartController: {fileID: 7727420331995151372}
+  playerKartController: {fileID: 0}
   racerName: 
 --- !u!1 &5085361173366856832
 GameObject:
