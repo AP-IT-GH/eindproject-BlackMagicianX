@@ -1,195 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1505034936992598953
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 487219828416636692}
-  - component: {fileID: 6818549179409250506}
-  - component: {fileID: 3506467159933446406}
-  - component: {fileID: 1784625040131174772}
-  m_Layer: 2
-  m_Name: steeringWheelCtrlr
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &487219828416636692
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505034936992598953}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.5963678, y: 0.3799283, z: -0.3799283, w: 0.5963678}
-  m_LocalPosition: {x: -0.15200715, y: 0.5089972, z: 0.05483447}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6453155899726520831}
-  m_Father: {fileID: 3137537921393488654}
-  m_LocalEulerAnglesHint: {x: -25, y: 90, z: -90}
---- !u!135 &6818549179409250506
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505034936992598953}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.1249861
-  m_Center: {x: 0.000000001899726, y: -0.000000003787965, z: 0.031775758}
---- !u!54 &3506467159933446406
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505034936992598953}
-  serializedVersion: 4
-  m_Mass: 0.1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 4
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!114 &1784625040131174772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505034936992598953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 454e68d7b69f82145b3ace093df68e9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 534327168678276753}
-  m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 1
-  m_DistanceCalculationMode: 1
-  m_SelectMode: 1
-  m_FocusMode: 1
-  m_CustomReticle: {fileID: 0}
-  m_AllowGazeInteraction: 0
-  m_AllowGazeSelect: 0
-  m_OverrideGazeTimeToSelect: 0
-  m_GazeTimeToSelect: 0.5
-  m_OverrideTimeToAutoDeselectGaze: 0
-  m_TimeToAutoDeselectGaze: 3
-  m_AllowGazeAssistance: 0
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstFocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastFocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_StartingInteractionStrengthFilters: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  wheelTransform: {fileID: 6453155899726520831}
-  kartController: {fileID: 1616423499398736431}
-  OnWheelRotated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2932958257437795303
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,8 +447,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3137537921393488640}
+  - component: {fileID: 155319006449496968}
+  - component: {fileID: 8374784682280655564}
   - component: {fileID: 3137537921390588704}
   - component: {fileID: 3137537921391587808}
+  - component: {fileID: 3830853614026905324}
   m_Layer: 2
   m_Name: SteeringWheel
   m_TagString: Untagged
@@ -654,13 +467,63 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3137537921393782560}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.8612201, y: 0.5070936, z: -0.017251803, w: -0.029299328}
-  m_LocalPosition: {x: 0.00031018816, y: 0.0060713147, z: 0.17439774}
-  m_LocalScale: {x: 2.661345, y: 2.661345, z: 0.75024253}
+  m_LocalRotation: {x: -0.6725368, y: 0.21838988, z: -0.51723003, w: 0.48215485}
+  m_LocalPosition: {x: -0.29568058, y: 0.44357264, z: 0.054689705}
+  m_LocalScale: {x: 2.6613452, y: 2.6613452, z: 0.75024277}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6453155899726520831}
+  m_Children:
+  - {fileID: 6453155899726520831}
+  m_Father: {fileID: 3137537921393488654}
   m_LocalEulerAnglesHint: {x: 176.103, y: 0, z: 60.980003}
+--- !u!64 &155319006449496968
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137537921393782560}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -951608786083511892, guid: 278f5f353c2a1da4581f70493f005d1d, type: 3}
+--- !u!54 &8374784682280655564
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137537921393782560}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!33 &3137537921390588704
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -711,6 +574,113 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3830853614026905324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137537921393782560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454e68d7b69f82145b3ace093df68e9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 534327168678276753}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  wheelTransform: {fileID: 6453155899726520831}
+  kartController: {fileID: 1616423499398736431}
+  OnWheelRotated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3137537921393782562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1214,7 @@ Transform:
   - {fileID: 3137537921393488642}
   - {fileID: 3137537921393488652}
   - {fileID: 3137537921393488658}
-  - {fileID: 487219828416636692}
+  - {fileID: 3137537921393488640}
   m_Father: {fileID: 3137537921292383191}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -3.897}
 --- !u!1 &3137537921393782578
@@ -2364,13 +2334,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7918618207956195889}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70669794, y: -0.70669794, z: 0.024042483, w: -0.024042483}
-  m_LocalPosition: {x: -0.0072195632, y: 0.00045460276, z: 0.016545046}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.8612201, y: -0.5070936, z: 0.017251845, w: -0.029299289}
+  m_LocalPosition: {x: -0.0019605362, y: -0.0009548496, z: 0.23246716}
+  m_LocalScale: {x: 0.3757498, y: 0.37700024, z: 1.3174015}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3137537921393488640}
-  m_Father: {fileID: 487219828416636692}
+  m_Children: []
+  m_Father: {fileID: 3137537921393488640}
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!1 &8249182919258282982
 GameObject:
@@ -2504,6 +2473,12 @@ MonoBehaviour:
   kartModel: {fileID: 3137537921393488654}
   kartNormal: {fileID: 3137537922403377517}
   hitbox: {fileID: 5936759502304813863}
+  speed: 0
+  currentSpeed: 0
+  rotate: 0
+  currentRotate: 0
+  accelerationInput: 0
+  brakeInput: 0
   acceleration: 80
   braking: 20
   steering: 5
@@ -2513,7 +2488,7 @@ MonoBehaviour:
     m_Bits: 0
   frontWheels: {fileID: 3137537921143488001}
   backWheels: {fileID: 3137537921864692967}
-  steeringWheelModel: {fileID: 487219828416636692}
+  steeringWheelModel: {fileID: 0}
   laps: 0
 --- !u!1001 &2649577701889053222
 PrefabInstance:

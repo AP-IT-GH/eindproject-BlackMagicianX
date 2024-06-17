@@ -14,6 +14,7 @@ public class PlacementManager : MonoBehaviour
     private string playerName;
 
     private int currentLap;
+    private int laps;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class PlacementManager : MonoBehaviour
         resultList = new List<String>();
         currentLap = Int32.MinValue;
         playerFinished = false;
+        laps = 2;
     }
 
     // Update is called once per frame
@@ -35,7 +37,7 @@ public class PlacementManager : MonoBehaviour
                 Debug.Log($"Current lap: {currentLap}");
             }
 
-            if (player.GetComponent<RacingManager>().GetCurrentLap() == 4 && !resultList.Contains(player.GetComponent<RacingManager>().GetRacerName()))
+            if (player.GetComponent<RacingManager>().GetCurrentLap() == laps && !resultList.Contains(player.GetComponent<RacingManager>().GetRacerName()))
             {
                 if (player.CompareTag("Player"))
                 {
@@ -46,7 +48,7 @@ public class PlacementManager : MonoBehaviour
             }
         }
 
-        if (currentLap == 4 && playerFinished)
+        if (currentLap == laps && playerFinished)
         {
             ResultController.playerName = this.playerName;
             

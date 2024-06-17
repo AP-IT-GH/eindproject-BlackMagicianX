@@ -18,6 +18,9 @@ public class EngineSoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        audioSource.pitch = minPitch + 0.02f * kart.GetComponent<KartController>().currentSpeed;
+        if (kart.GetComponent<KartController>() != null)
+            audioSource.pitch = minPitch + 0.02f * kart.GetComponent<KartController>().currentSpeed;
+        else
+            audioSource.pitch = minPitch + 0.02f * kart.GetComponent<PlayerKartController>().currentSpeed;
     }
 }

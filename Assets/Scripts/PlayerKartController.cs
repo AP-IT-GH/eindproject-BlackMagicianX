@@ -51,6 +51,8 @@ public class PlayerKartController : MonoBehaviour
     {
         ApplyAcceleration(accelerationInput);
         ApplyBraking(brakeInput);
+
+        steeringWheelModel.localPosition = new Vector3(-0.2956806f, 0.4435726f, 0.05468971f);
     }
 
     public void ApplyAcceleration(float input)
