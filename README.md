@@ -66,11 +66,11 @@ Eenmaal als alle laps voorbij zijn word de speler gestuurd naar een eindscherm w
 
 Hier is de Kart die gebruikt word door de speler:
 
-<img src="images/Player.png" width="210" height="168" alt="Player"/><br><sub><sup>*Mixandjam. (n.d.). GitHub - mixandjam/MarioKart-Drift*.</sup></sub>
+<<img src="images/Player.png" width="420" height="336" alt="Player"/><br><sub><sup>*Mixandjam. (n.d.). GitHub - mixandjam/MarioKart-Drift https://github.com/mixandjam/MarioKart-Drift*.</sup></sub>
 
 Dit is de Kart die door ML Agents getrained word om zelf door de circuit de racen:
 
-<img src="images/Agent.png" width="210" height="168" alt="Agent"/><br><sub><sup>*Mixandjam. (n.d.). GitHub - mixandjam/MarioKart-Drift*.</sup></sub>
+<img src="images/Agent.png" width="420" height="336" alt="Agent"/><br><sub><sup>*Mixandjam. (n.d.). GitHub - mixandjam/MarioKart-Drift https://github.com/mixandjam/MarioKart-Drift*.</sup></sub>
 
 Dit is de circuit waar de speler en de agents op racen. Er zijn barrières geplaatst op meerdere plekken om te voorkomen dat de racers
 verkeerd rijden.
@@ -81,13 +81,13 @@ verkeerd rijden.
 
 De Agent heeft twee verschillende acties: Accelereren en sturen. De Agent kan ook achteruit rijden, maar krijgt daarvoor wel een penalty, dus word het alleen gebruikt bij noodgevallen.
 
-<img src="images/Actions.png" alt="Actions"/><br><sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
+<img src="images/Actions.png" alt="Actions"/><br><sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts https://github.com/Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
 
 De Agent kan observeren waar de volgende checkpoint is. Eenmaal wanneer een checkpoint bereikt is door de Agent, checkt de Agent of de checkpoint de volgende in de lijst is. 
 Als dat zo is, dan krijgt de Agent een reward van 0.25f + bonus reward voor hoe snel de Agent was voor het bereiken van de checkpoint.
 Als de de checkpoint de laatste checkpoint is in de lijst, dan heeft de Agent een lap complete en krijgt de Agent een reward van 0.5f, en word de Episode geëindigd. 
 
-<img src="images/CheckPointsReached.png" alt="CheckPointsReached"/><br><sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
+<img src="images/CheckPointsReached.png" alt="CheckPointsReached"/><br><sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts https://github.com/Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
 
 De Agent krijgt een penalty als die een muur raakt of van de weg vliegt en een reward als de Agent op de weg blijft.
 Daarnaast hebben wij ook geïmplementeerd dat de Agent acceleratie verliest als die naast de weg rijd. Dit zorgt ervoor dat als de Agent slecht rijd dat het nog langer duurt
@@ -113,7 +113,35 @@ Desalniettemin hebben wij wel goede resultaten gekregen na het trainen van de Ag
 
 <img src="images/Tensorboard.png" alt="Tensorboard"/>
 
+Vanwege de meer complexe design van de circuit dat we gebruiken hebben we de batch_size en buffer_size verdubbeld, wat uiteindelijk tot betere resultaten leverde.
 
+```yaml
+behaviors:
+  KartAgent:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 256
+      buffer_size: 4096
+      learning_rate: 0.0003
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.9
+      num_epoch: 5
+      learning_rate_schedule: linear
+      beta_schedule: constant
+      epsilon_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        gamma: 0.95
+        strength: 1.0
+    max_steps: 5000000
+    time_horizon: 64
+    summary_freq: 2000
+```
 
 ## Conclusie 
 Ons doel was het maken van een immersieve kart racing experience waarin de speler aan het racen is tegen AI getrainde tegenstanders.
@@ -124,3 +152,9 @@ En hoewel resultaten in grafieken één ding zijn, ligt het belangrijkste gedeel
 een interessante maar ook uitdagende gaming experience geven en racen zoals verwacht word van de speler.
 
 Als het gaat om verbeteringen, zijn wij van plan meer focus te zetten op het optimaliseren van de reward systeem, meerdere moeilijkheidsgraden toe te voegen en meerdere verschillende karts toe te voegen met andere controls en snelheden.
+
+## Bronvermelding
+<sub>Andrew. (2022, November 12). A steering wheel for XR toolkit [Video]. YouTube. https://www.youtube.com/watch?v=qbCEHCVx-Dc</sub><br>
+<sub>Dave’s OSTs. (2017, May 26). Big Blue - Mario Kart 8 Deluxe OST [Video]. YouTube. https://www.youtube.com/watch?v=ETLNilxpvhY</sub><br>
+<sub>Issei. (2008, July 7). Gran Turismo - Like the wind [Video]. YouTube. https://www.youtube.com/watch?v=W1cJztUfb8Q</sub><br>
+<sub>MoreMelodyPlus. (2023, November 17). Victory! – Super Mario RPG Remake: Original Soundtrack OST [Video]. YouTube. https://www.youtube.com/watch?v=i_eL0Pg4gLc</sub>
