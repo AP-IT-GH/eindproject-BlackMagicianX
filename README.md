@@ -90,6 +90,8 @@ Als de de checkpoint de laatste checkpoint is in de lijst, dan heeft de Agent ee
 <img src="images/CheckPointsReached.png" alt="CheckPointsReached"/><br><sub><sup>*Sebastian-Schuchmann. (n.d.). GitHub - Sebastian-Schuchmann/AI-Racing-Karts*.</sup></sub>
 
 De Agent krijgt een penalty als die een muur raakt of van de weg vliegt en een reward als de Agent op de weg blijft.
+Daarnaast hebben wij ook geïmplementeerd dat de Agent acceleratie verliest als die naast de weg rijd. Dit zorgt ervoor dat als de Agent slecht rijd dat het nog langer duurt
+om naar de volgende checkpoint te gaan, wat uitendelijk minder reward betekent.
 
 <img src="images/Penalty.png" alt="Penalty"/>
 
