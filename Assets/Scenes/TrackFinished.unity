@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1817236227}
-  m_IndirectSpecularColor: {r: 0.18384448, g: 0.22859347, b: 0.30081007, a: 1}
+  m_IndirectSpecularColor: {r: 0.18384424, g: 0.22859326, b: 0.3008089, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4146,6 +4146,15 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9023294257551329976, guid: b752a87df7f1f4e4490bdb843e352db7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 953663108}
+    - targetCorrespondingSourceObject: {fileID: 9023294257551329976, guid: b752a87df7f1f4e4490bdb843e352db7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 953663109}
+    - targetCorrespondingSourceObject: {fileID: 9023294257551329976, guid: b752a87df7f1f4e4490bdb843e352db7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 953663107}
     - targetCorrespondingSourceObject: {fileID: 8249182919258282982, guid: b752a87df7f1f4e4490bdb843e352db7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 676217848}
@@ -8907,9 +8916,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de1ad481e11c3b419dab952395a4725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kartAgent: {fileID: 0}
+  kartAgent: {fileID: 953663109}
   kartController: {fileID: 0}
-  racerName: 
+  playerKartController: {fileID: 953663106}
+  racerName: player
 --- !u!114 &676217848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8924,7 +8934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxTimeToReachNextCheckpoint: 30
   TimeLeft: 30
-  kartAgent: {fileID: 0}
+  kartAgent: {fileID: 953663109}
   nextCheckPointToReach: {fileID: 0}
   racingManager: {fileID: 676217847}
 --- !u!1 &683189321 stripped
@@ -11712,6 +11722,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953111880}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &953663105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9023294257551329976, guid: b752a87df7f1f4e4490bdb843e352db7, type: 3}
+  m_PrefabInstance: {fileID: 347915184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &953663106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1616423499398736431, guid: b752a87df7f1f4e4490bdb843e352db7, type: 3}
+  m_PrefabInstance: {fileID: 347915184}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953663105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58c700cb1de2564ea4dca18ba604d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &953663107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953663105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &953663108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953663105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: KartAgent
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
+--- !u!114 &953663109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953663105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682160e477560084fba9b5f12d5619f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  _checkpointManager: {fileID: 676217848}
 --- !u!1 &956337373
 GameObject:
   m_ObjectHideFlags: 0

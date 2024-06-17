@@ -9,8 +9,10 @@ public class RacingManager : MonoBehaviour
     private bool lapComplete;
     private int lap;
     public KartAgent kartAgent;
-    public KartController kartController;
+    public KartController? kartController;
+    public PlayerKartController? playerKartController;
     public string racerName;
+    private float currentAccelPlayer;
     private float currentAccel;
     private bool isOffRoad;
     private bool isOnRoad;
@@ -20,13 +22,26 @@ public class RacingManager : MonoBehaviour
     {
         lapComplete = true;
         lap = 0;
-        currentAccel = kartController.acceleration;
+        
+        if (kartController == null)
+        {
+            currentAccelPlayer = playerKartController.acceleration;
+            playerKartController.acceleration = 0f;
+            playerKartController.gravity = 0f;
+            playerKartController.steering = 0f;
+        }
+
+        if (playerKartController == null)
+        {
+            currentAccel = kartController.acceleration;
+            kartController.acceleration = 0f;
+            kartController.gravity = 0f;
+            kartController.steering = 0f;
+        }
+
         isOffRoad = false;
         isOnRoad = false;
 
-        kartController.acceleration = 0f;
-        kartController.gravity = 0f;
-        kartController.steering = 0f;
         StartCoroutine(Countdown(4));
     }
 
@@ -68,13 +83,20 @@ public class RacingManager : MonoBehaviour
         {
             isOffRoad = true;
             isOnRoad = false;
-            kartController.acceleration = 30f;
+
+            if (playerKartController == null)
+                kartController.acceleration = 30f;
+            else
+                playerKartController.acceleration = 30f;
         }
         else if (collision.gameObject.CompareTag("Road"))
         {
             isOffRoad = false;
             isOnRoad = true;
-            kartController.acceleration = currentAccel;
+            if (playerKartController == null)
+                kartController.acceleration = currentAccel;
+            else
+                playerKartController.acceleration = currentAccelPlayer;
         }
     }
 
@@ -83,7 +105,11 @@ public class RacingManager : MonoBehaviour
         if (collision.gameObject.CompareTag("OffRoad"))
         {
             isOffRoad = false;
-            kartController.acceleration = currentAccel;
+
+            if(playerKartController == null)
+                kartController.acceleration = currentAccel;
+            else
+                playerKartController.acceleration = currentAccelPlayer;
         }
         else if (collision.gameObject.CompareTag("Road"))
         {
@@ -121,8 +147,18 @@ public class RacingManager : MonoBehaviour
         }
 
         // count down is finished...
-        kartController.acceleration = currentAccel;
-        kartController.gravity = 25f;
-        kartController.steering = 15f;
+        if (kartController == null)
+        {
+            playerKartController.acceleration = currentAccelPlayer;
+            playerKartController.gravity = 25f;
+            playerKartController.steering = 15f;
+        }
+
+        if (playerKartController == null)
+        {
+            kartController.acceleration = currentAccel;
+            kartController.gravity = 25f;
+            kartController.steering = 15f;
+        }
     }
 }

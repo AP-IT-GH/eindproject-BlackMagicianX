@@ -30,15 +30,18 @@ public class KartAgent : Agent
     {
         var Actions = actions.ContinuousActions;
 
-        _kartController.ApplyAcceleration(Actions[1]);
-        _kartController.Steer(Actions[0]);
-        _kartController.AnimateKart(Actions[0]);
-
-        // Penalize for moving backward
-        Vector3 localVelocity = transform.InverseTransformDirection(_kartController.hitbox.velocity);
-        if (localVelocity.z < 0)
+        if (_kartController != null)
         {
-            AddReward(-0.01f);
+            _kartController.ApplyAcceleration(Actions[1]);
+            _kartController.Steer(Actions[0]);
+            _kartController.AnimateKart(Actions[0]);
+
+            // Penalize for moving backward
+            Vector3 localVelocity = transform.InverseTransformDirection(_kartController.hitbox.velocity);
+            if (localVelocity.z < 0)
+            {
+                AddReward(-0.01f);
+            }
         }
     }
 

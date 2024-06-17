@@ -11,10 +11,10 @@ public class PlayerKartController : MonoBehaviour
     public Transform kartNormal;
     public Rigidbody hitbox;
 
-    float speed, currentSpeed;
-    float rotate, currentRotate;
-    float accelerationInput = 0f;
-    float brakeInput = 0f;
+    public float speed, currentSpeed;
+    public float rotate, currentRotate;
+    public float accelerationInput = 0f;
+    public float brakeInput = 0f;
 
     [Header("Parameters")]
     public float acceleration = 30f;
